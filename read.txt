@@ -1,5 +1,5 @@
 远程库github
-new poi ----> create ...
+new poi ----> create
 本地建库
 1. 创建文件夹 mkdir demo，进入文件夹cd demo
 2. 初始化库git init
