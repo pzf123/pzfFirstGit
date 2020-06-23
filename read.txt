@@ -1,3 +1,6 @@
+远程库github
+new poi ----> create ...2
+本地建库
 1. 创建文件夹 mkdir demo，进入文件夹cd demo
 2. 初始化库git init
 3. 登录连接远程 git config --global user.name "bryan sun" git config --global user.email "hitsjt@gmail.com"
