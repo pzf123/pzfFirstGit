@@ -6,3 +6,4 @@ new poi ----> create
 3. 登录连接远程 git config --global user.name "bryan sun" git config --global user.email "hitsjt@gmail.com"
 4. 创建文件提交代码，git add read.txt /  git commit -m "first commit"
 5. 推送代码 git push -u origin master （输入账号和密码）
+   （第一次登陆会提示错误，根据提示输入git push --set-upstream origin master）
