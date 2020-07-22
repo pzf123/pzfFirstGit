@@ -7,3 +7,14 @@ new poi ----> create
 4. 创建文件提交代码，git add read.txt /  git commit -m "first commit"
 5. 推送代码 git push -u origin master （输入账号和密码）
    （第一次登陆会提示错误，根据提示输入git push --set-upstream origin master）
+
+// 更改当前用户执行策略
+set-ExecutionPolicy : 对注册表项“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell”的
+访问被拒绝。 要更改默认(LocalMachine)作用域的执行策略，请使用“以管理员身份运行”选项启动 Windows PowerShell。要更改当
+前用户的执行策略，请运行 "Set-ExecutionPolicy -Scope CurrentUser"。
+所在位置 行:1 字符: 1
++ set-ExecutionPolicy RemoteSigned
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.SetExecutionPolicyComma
+   nd
