@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排序</title>
+</head>
+<body>
+    <script>
+        let arr = [8, 4, 6, 5, 2]
+        function bubbleSort(a) {
+            for (var i= 0; i< a.length; i++) {
+                for (var j= 0; j< a.length - 1 - i; j++) {
+                    if (a[j] > a[j+1]) {
+                        var temp = a[j+1] 
+                        a[j+1] = a[j]
+                        a[j] = temp
+                    }
+                }
+            }
+            return a
+        }
+        // 冒泡二
+        function bubbleSort2(a) {
+            let len = a.length
+            while (len > 0) {
+                for (var j= 0; j < len; j++) {
+                    if (a[j] > a[j+1]) {
+                        var temp = a[j+1] 
+                        a[j+1] = a[j]
+                        a[j] = temp
+                    }
+                }
+                len--
+            }
+            return a
+        }
+        // 冒泡三
+        function bubbleSort3(a) {
+            let len = a.length
+            while (len > 0) {
+                let pos = 0
+                for (var j= 0; j < len; j++) {
+                    if (a[j] > a[j+1]) {
+                        // 记住换的位置
+                        pos = j
+                        var temp = a[j+1] 
+                        a[j+1] = a[j]
+                        a[j] = temp
+                    }
+                }
+                len = pos
+            }
+            return a
+        }
+        function bubbleSort4(a) {
+            let len = a.length
+            let low = 0
+            let hight = len - 1
+            while (low < hight) {
+                for (j= low; j < hight; j++) {
+                    if (a[j] > a[j+1]) {
+                        // 记住换的位置
+                        pos = j
+                        var temp = a[j+1] 
+                        a[j+1] = a[j]
+                        a[j] = temp
+                    }
+                }
+                hight--
+                for (j= hight; j > low; j--) {
+                    if (a[j] < a[j-1]) {
+                        // 记住换的位置
+                        pos = j
+                        var temp = a[j-1] 
+                        a[j-1] = a[j]
+                        a[j] = temp
+                    }
+                }
+                low++
+                
+            }
+            return a
+        }
+        console.log(bubbleSort4(arr))
+    </script>
+</body>
+</html>

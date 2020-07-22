@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+ let url = 'http://www.domain.com/?user=anonymous&id=123&id=456&city=%E5%8C%97%E4%BA%AC&enabled';
+ getParams(url)
+ function getParams (url) {
+    let strUrl = url.split('?')[1]
+    let arr = strUrl.split('&')
+    let params = {}
+    arr.forEach(atm => {
+        if (atm.indexOf("=") != -1) {
+            let [key, value] = atm.split('=')
+            if (params.hasOwnProperty(key)) {
+                params[key] = [].concat(params[key], decodeURIComponent(value)) 
+            } else {
+                params[key] = decodeURIComponent(value)
+            }
+        }
+    })
+    console.log(params)
+    return params
+ }
+</script>
+</html>

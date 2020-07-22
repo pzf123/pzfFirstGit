@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function reverseArr (str) {
+           var arr = str.split('')
+           var newArr = []
+           for (var i = arr.length-1; i >= 0; i--) {
+             newArr.push(arr[i])
+           }
+           return newArr.join('')
+       }
+       var Person = function () {
+           this.name = 5
+       }
+       Person.prototype.age = 12
+       var person = new Person()
+       console.log(person.age)
+       var person1 = new Person()
+       Person.prototype.age = 10
+       console.log(person.__proto__)
+       console.log(Person.prototype.hasOwnProperty('name'))
+       
+
+    </script>
+</body>
+</html>

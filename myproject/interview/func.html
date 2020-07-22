@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var m=1,j=k=0;
+        function add (n) {
+            return n = n + 1
+        }
+        y = add(m)
+        // 4
+        function add(n) {
+            return n = n + 3
+        }
+        z=add(m)
+        // 4
+        // 关于boolean
+        var myFlag = new String('dd')
+        var oldFlag = 'dd'
+        function count(str) {
+            var arr = str.split('')
+            if (!arr.length) return false
+            var obj = {}
+            for (var i=0; i < arr.length; i++) {
+                if (obj[arr[i]]) {
+                    obj[arr[i]]++
+                } else {
+                    obj[arr[i]] = 1
+                }
+            }
+            return obj
+        }
+        count('dddeer')
+        // 转驼峰
+        function cssStyle2DomStyle(sName) {
+            var arr = sName.split('-')
+            for (var i =0; i< arr.length; i++) {
+                if (i> 1 || (i == 1 && arr[0] !== '')) {
+                    let strArr = arr[i].split('')
+                    strArr[0] = strArr[0].toUpperCase()
+                    arr[i] = strArr.join('')
+                }
+            }
+            return arr.join()
+        }
+        cssStyle2DomStyle('-webkit-border-image')
+        function rgb2hex(sRGB) {
+            var str = sRGB.split('(')[1].split(')')[0]
+            var numArr = str.split(',')
+            for (var i = 0; i< numArr.length; i++) {
+                numArr[i] = numArr[i].trim()
+                numArr[i] = Number(numArr[i]).toString(16).toLowerCase()
+            }
+            return '#' + numArr.join('')
+        }
+        rgb2hex('rgb(255,255, 255')
+        var foo = 2
+        var qux = 2
+        if (true) {
+            var bar = 'bar'
+            let baz = 'baz'
+        }
+        for (var i=0; i<5; i++) {
+            function cout (i) {
+                setTimeout(function() {
+            //         console.log(i)
+                }, 1000)
+            }
+            // cout(i)
+        }
+        const obj = {
+            x: 1,
+            print1: () => {
+                console.log('1', this.x)
+            },
+            print2 () {
+                console.log('2', this.x)
+            },
+            print3: function () {
+                console.log('3', this.x)
+            }.bind(this)
+        }
+        // obj.print2()
+        obj.print1()
+        // obj.print3()
+        var reg = /^aaa/
+        console.log(reg.test('aaaoaaddd'))
+        function searchStr (arr, str) {
+            var reg = new RegExp('^'+str)
+            let newArr = []
+            for (let index = 0; index < arr.length; index++) {
+                if (reg.test(arr[index]) && newArr.length < 10) {
+                    newArr.push(arr[index])
+                }
+            }
+            return newArr
+        }
+        console.log(searchStr(['annali', 'beandou', 'lisani', 'wanngsi', 'wangwu', 'zhangliu', 'wanngsi', 'wangwu', 'zhangliu', 'wanngsi', 'wangwu', 'zhangliu', 'wanngsi', 'wangwu', 'zhangliu', 'wanngsi', 'wangwu', 'zhangliu', 'wanngsi', 'wangwu', 'zhangliu'], 'wan'))
+    </script>
+</body>
+</html>
