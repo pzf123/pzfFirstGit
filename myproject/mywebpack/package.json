@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "html-webpack-plugin": "^4.3.0",
@@ -8,5 +9,15 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "name": "webpackconfig",
+  "description": "在代码目录下建立.gitignore文件： .gitignore （用记事本另存可以保存这个名字），\r 配置上要忽略的文件或者文件夹，然后提交到git 上即可。\r npm install -S webpack webpack-cli\r //在package.json\r \"scripts\": {\r     \"dev\": \"webpack-dev-server\"\r   },\r   npm install webpack-dev-server\r   输入npm run dev",
+  "version": "1.0.0",
+  "main": "test.js",
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

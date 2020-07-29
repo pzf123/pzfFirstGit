@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div style="color:red; text-color:blue;">
+        <span   style="color:green;text-color:black;">Hello</span>
+        </div>
 </body>
 <script type="text/javascript">
  let url = 'http://www.domain.com/?user=anonymous&id=123&id=456&city=%E5%8C%97%E4%BA%AC&enabled';
@@ -25,8 +27,18 @@
             }
         }
     })
-    console.log(params)
     return params
- }
+}
+    for(let i=0;i<2;i++){
+        setTimeout(function(){
+            console.log(i)
+        },100);
+    }
+    for(var j=0;j<2;j++){
+        setTimeout(function(){
+        console.log(j)
+        },100);
+    }
+    console.log('j',j)
 </script>
 </html>
